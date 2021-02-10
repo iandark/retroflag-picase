@@ -28,7 +28,7 @@ def poweroff():
 		os.system("sudo killall emulationstation")
 		os.system("sudo killall emulationstatio") #RetroPie 4.6
 		os.system("sudo sleep 5s")
-		os.system("sudo shutdown -r now")
+		os.system("sudo shutdown now")
 
 #blinks the LED to signal button being pushed
 def ledBlink():
@@ -57,7 +57,7 @@ def reset():
 if __name__ == "__main__":
 	#initialize GPIO settings
 	init()
-	#create a multiprocessing.Process instance for each function to enable parallelism 
+	#create a multiprocessing.Process instance for each function to enable parallelism
 	powerProcess = Process(target = poweroff)
 	powerProcess.start()
 	ledProcess = Process(target = ledBlink)

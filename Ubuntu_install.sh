@@ -56,8 +56,4 @@ exit 0" >> "$RC"
 fi
 #-----------------------------------------------------------
 
-#Reboot to apply changes----------------------------
-echo "RetroFlag Pi Case installation done. Will now reboot after 5 seconds."
-sleep 5
-sudo reboot
-#-----------------------------------------------------------
+echo "RetroFlag Pi Case installation done."

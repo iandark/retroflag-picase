@@ -28,7 +28,7 @@ DIR=/etc/init.d/S99RetroFlag
 if grep -q "python $script &" "S99RetroFlag";
 	then
 		if [ -x $DIR];
-			then 
+			then
 				echo "Executable S99RetroFlag already configured. Doing nothing."
 			else
 				chmod +x $DIR
@@ -40,8 +40,4 @@ if grep -q "python $script &" "S99RetroFlag";
 fi
 #-----------------------------------------------------------
 
-#Step 5) Reboot to apply changes----------------------------
-echo "RetroFlag Pi Case Switch installation done. Will now reboot after 3 seconds."
-sleep 3
-reboot
-#-----------------------------------------------------------
+echo "RetroFlag Pi Case installation done."

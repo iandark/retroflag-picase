@@ -3,7 +3,7 @@
 
 #Step 1) Check if root--------------------------------------
 if [[ $EUID -ne 0 ]]; then
-   echo "Please execute script as root." 
+   echo "Please execute script as root."
    exit 1
 fi
 #-----------------------------------------------------------
@@ -54,3 +54,5 @@ if grep -q "sudo python3 \/opt\/RetroFlag\/raspbian_SafeShutdown.py \&" "$RC";
 		echo "File /etc/rc.local configured."
 fi
 #-----------------------------------------------------------
+
+echo "RetroFlag Pi Case installation done."

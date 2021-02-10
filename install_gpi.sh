@@ -3,7 +3,7 @@ filewebsite="https://raw.githubusercontent.com/RetroFlag/retroflag-picase/master
 sleep 2s
 #Step 1) Check if root--------------------------------------
 if [[ $EUID -ne 0 ]]; then
-   echo "Please execute script as root." 
+   echo "Please execute script as root."
    exit 1
 fi
 
@@ -49,17 +49,4 @@ if grep -q "sudo python3 \/opt\/RetroFlag\/SafeShutdown.py \&" "$RC";
 fi
 #-----------------------------------------------------------
 
-#Step 7) Reboot to apply changes----------------------------
-echo "RetroFlag Pi Case installation done. Will now reboot after 3 seconds."
-sleep 3s
-sudo reboot
-#-----------------------------------------------------------
-
-
-
-
-
-
-
-
-
+echo "RetroFlag Pi Case installation done."

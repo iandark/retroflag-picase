@@ -13,7 +13,7 @@ File=/boot/config.txt
 wget -O  "/boot/overlays/RetroFlag_pw_io.dtbo" "$SourcePath/RetroFlag_pw_io.dtbo"
 if grep -q "RetroFlag_pw_io" "$File";
 	then
-		sed -i '/RetroFlag_pw_io/c dtoverlay=RetroFlag_pw_io.dtbo' $File 
+		sed -i '/RetroFlag_pw_io/c dtoverlay=RetroFlag_pw_io.dtbo' $File
 		echo "PW IO fix."
 	else
 		echo "dtoverlay=RetroFlag_pw_io.dtbo" >> $File
@@ -21,7 +21,7 @@ if grep -q "RetroFlag_pw_io" "$File";
 fi
 if grep -q "enable_uart" "$File";
 	then
-		sed -i '/enable_uart/c enable_uart=1' $File 
+		sed -i '/enable_uart/c enable_uart=1' $File
 		echo "UART fix."
 	else
 		echo "enable_uart=1" >> $File
@@ -57,7 +57,7 @@ DIR=/etc/init.d/S99RetroFlag
 if grep -q "python $script &" "$DIR";
 	then
 		if [ -x $DIR ];
-			then 
+			then
 				echo "Executable S99RetroFlag already configured. Doing nothing."
 			else
 				chmod +x $DIR
@@ -69,8 +69,4 @@ if grep -q "python $script &" "$DIR";
 fi
 #-----------------------------------------------------------
 
-#Reboot to apply changes----------------------------
-echo "RetroFlag Pi Case Switch installation done. Will now reboot after 3 seconds."
-sleep 3
-reboot
-#-----------------------------------------------------------
+echo "RetroFlag Pi Case installation done."

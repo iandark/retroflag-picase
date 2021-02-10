@@ -70,5 +70,11 @@ wget -O - "https://raw.githubusercontent.com/iandark/retroflag-picase/master/bat
 
 --------------------
 
+# Uninstallation
+
+wget -O - "https://raw.githubusercontent.com/iandark/retroflag-picase/master/uninstall.sh" | sudo bash
+
+--------------------
+
 Example for lakkatv:
 https://github.com/marcelonovaes/lakka_nespi_power

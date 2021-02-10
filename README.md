@@ -31,6 +31,16 @@ wget -O - "https://raw.githubusercontent.com/iandark/retroflag-picase/master/ras
 
 --------------------
 
+Example for Ubuntu:
+1. Make sure internet connected.
+2. Make sure keyboard connected.
+3. Press F4 enter terminal.
+4. In the terminal, type the one-line command below(Case sensitive):
+
+wget -O - "https://raw.githubusercontent.com/iandark/retroflag-picase/master/Ubuntu_install.sh" | sudo bash
+
+--------------------
+
 # retroflag-picase (nespi+, superpi, megapi,nespi4 case)
 RetroFlag Pi-Case Safe Shutdown
 

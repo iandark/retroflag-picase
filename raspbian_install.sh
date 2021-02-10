@@ -38,7 +38,7 @@ if [ -e $script ];
 	then
 		echo "Script raspbian_SafeShutdown.py already exists. Doing nothing."
 	else
-		wget "https://raw.githubusercontent.com/RetroFlag/retroflag-picase/master/raspbian_SafeShutdown.py"
+		wget "https://raw.githubusercontent.com/iandark/retroflag-picase/master/raspbian_SafeShutdown.py"
 fi
 #-----------------------------------------------------------
 

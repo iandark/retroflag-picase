@@ -1,6 +1,6 @@
 #!/bin/bash
 
-SourcePath=https://raw.githubusercontent.com/RetroFlag/retroflag-picase/master
+SourcePath=https://raw.githubusercontent.com/iandark/retroflag-picase/master
 
 #-----------------------------------------------------------
 sleep 2s
@@ -13,7 +13,7 @@ File=/boot/config.txt
 wget -O  "/boot/overlays/RetroFlag_pw_io.dtbo" "$SourcePath/RetroFlag_pw_io.dtbo"
 if grep -q "RetroFlag_pw_io" "$File";
 	then
-		sed -i '/RetroFlag_pw_io/c dtoverlay=RetroFlag_pw_io.dtbo' $File 
+		sed -i '/RetroFlag_pw_io/c dtoverlay=RetroFlag_pw_io.dtbo' $File
 		echo "PW IO fix."
 	else
 		echo "dtoverlay=RetroFlag_pw_io.dtbo" >> $File
@@ -21,7 +21,7 @@ if grep -q "RetroFlag_pw_io" "$File";
 fi
 if grep -q "enable_uart" "$File";
 	then
-		sed -i '/enable_uart/c enable_uart=1' $File 
+		sed -i '/enable_uart/c enable_uart=1' $File
 		echo "UART fix."
 	else
 		echo "enable_uart=1" >> $File
@@ -54,7 +54,7 @@ DIR=/userdata/system/custom.sh
 if grep -q "python $script &" "$DIR";
 	then
 		if [ -x "$DIR" ];
-			then 
+			then
 				echo "Executable script already configured. Doing nothing."
 			else
 				chmod +x $DIR

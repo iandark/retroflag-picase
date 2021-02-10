@@ -54,9 +54,3 @@ if grep -q "sudo python3 \/opt\/RetroFlag\/raspbian_SafeShutdown.py \&" "$RC";
 		echo "File /etc/rc.local configured."
 fi
 #-----------------------------------------------------------
-
-#Step 7) Reboot to apply changes----------------------------
-echo "RetroFlag Pi Case installation done. Will now reboot after 3 seconds."
-sleep 3
-sudo reboot
-#-----------------------------------------------------------
